@@ -1,0 +1,20 @@
+h2{
+    text-align: center;
+}
+
+.all-game{
+    text-align: center;
+    
+}
+
+.all-cards-container{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.my-cards, .dealer-cards{
+    width: 150px;
+    border: 1px solid;
+}
+
