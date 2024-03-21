@@ -1,18 +1,31 @@
+// const handsValue = {
+//     "2":2,
+//     "3":3,
+//     "4":4,
+//     "5":5,
+//     "6":6,
+//     "7":7,
+//     "8":8,
+//     "9":9,
+//     "10":10,
+//     "J":10,
+//     "Q":10,
+//     "K":10
+// }
 const handsValue = {
-    "2":2,
-    "3":3,
-    "4":4,
-    "5":5,
-    "6":6,
-    "7":7,
-    "8":8,
-    "9":9,
-    "10":10,
-    "J":10,
-    "Q":10,
-    "K":10
+    "2":'./cardsImg/1.png',
+    "3":'./cardsImg/1.png',
+    "4":'./cardsImg/1.png',
+    "5":'./cardsImg/1.png',
+    "6":'./cardsImg/1.png',
+    "7":'./cardsImg/1.png',
+    "8":'./cardsImg/1.png',
+    "9":'./cardsImg/1.png',
+    "10":'./cardsImg/1.png',
+    "J":'./cardsImg/1.png',
+    "Q":'./cardsImg/1.png',
+    "K":'./cardsImg/1.png'
 }
-
 
 const myCards = document.getElementById("myCards");
 const counter = document.getElementById("counter");
@@ -54,8 +67,10 @@ reloadButton.addEventListener('click', function(){
     for (let i = 0; i < 2; i++) {
         const { key, value } = selectRandomCards();
         console.log(key, value)
-        myCards.innerHTML += `<p>${key}</p>`;
+        // myCards.innerHTML += `<p>${key}</p>`;
+        myCards.innerHTML += `<img src="${handsValue[key]}" alt="${key}">`;
         total += value;
+        console.log(total)
         counter.innerHTML = `<p>Total: ${total}</p>`;
     }
     //El hit button permite apostar mas cartas pero si te pasas de 21 perdes
