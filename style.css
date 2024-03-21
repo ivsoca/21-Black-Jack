@@ -16,5 +16,6 @@ h2{
 .my-cards, .dealer-cards{
     width: 150px;
     border: 1px solid;
+    margin: 20px;
 }
 

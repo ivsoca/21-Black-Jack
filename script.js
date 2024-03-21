@@ -13,6 +13,7 @@ const handsValue = {
     "K":10
 }
 
+
 const myCards = document.getElementById("myCards");
 const counter = document.getElementById("counter");
 
@@ -68,11 +69,14 @@ reloadButton.addEventListener('click', function(){
         if(total > 21){
             counter.innerHTML = `<p>Total: ${total}</p>`;
             hitButton.disabled = true;
-            winOrLose.innerHTML = `<p>Perdiste! El Dealer Ganó!!<p>`     
+            winOrLose.innerHTML = `<p>Perdiste! El Dealer Ganó!!<p>`;
+            startButton.disabled = true;
+            standButton.disabled = true;
         }else if(total === 21){
             winOrLose.innerHTML = `<p>21 Jack Black !! Ganaste !!<p>`   
             hitButton.disabled = true;
             standButton.disabled = true;
+            startButton.disabled = true;
         }
     });
 }
@@ -88,6 +92,14 @@ reloadButton.addEventListener('click', function(){
         counterDealer.innerHTML = `<p>Total Dealer: ${totalDealer}</p>`;
     }
 
+    function dealerStart(){
+        const { key, value } = selectRandomCards();
+        dealerCards.innerHTML += `<p>${key}</p>`;
+        totalDealer += value;
+        counterDealer.innerHTML = `<p>Total Dealer: ${totalDealer}</p>`;
+    }
+    dealerStart();
+
     //Lógica para que el dealer juegue automáticamente
     while (totalDealer < 18) {
         const { key, value } = selectRandomCards();
@@ -101,13 +113,16 @@ reloadButton.addEventListener('click', function(){
         winOrLose.innerHTML = `<p>Ganaste! El Dealer perdió!</p>`;
         hitButton.disabled = true;
         standButton.disabled = true;
+        startButton.disabled = true;
     } else if (totalDealer > total) {
         winOrLose.innerHTML = `<p>Perdiste! El Dealer ganó.</p>`;
         hitButton.disabled = true;
         standButton.disabled = true;
+        startButton.disabled = true;
+
     } else {
-        winOrLose.innerHTML = `<p>Empate!</p>`;
-    }
+            winOrLose.innerHTML = `<p>Empate!</p>`;
+        }
     }
 
     //Boton para empezar mi partida.
@@ -119,12 +134,8 @@ reloadButton.addEventListener('click', function(){
     //Boton donde me planto y en consecuencia se activa la partida(funcion) del dealer donde definira quien gano o perdio.
     standButton.addEventListener('click', function(){
         startGameDealer();
-    })
+    });
     
-
-
-
-
 
 
     //codigo viejo de emergencia por si acaso
