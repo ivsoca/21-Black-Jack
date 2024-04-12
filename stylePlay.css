@@ -1,0 +1,12 @@
+body, html{
+    background-color: rgb(32, 32, 32);
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-btn{
+    width: 200px;
+}

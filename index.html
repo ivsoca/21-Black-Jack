@@ -4,36 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style2.css" />
     <title>21 Jack Black</title>
 </head>
-<body>
-    <h2>Tus cartas</h2>
-   
+<body class="custom-bg">
+    <h1 class="text-light">¡21 Jack Black!</h1>
 
-    <div class="all-game">
-        <button id="startButton">Start!</button>
+    <div class="container all-game">
+        <p class="text-light h5">¿Cuanto desea apostar?</p>
+      
+        <button id="hundred" type="button" class="bets-money" >$100</button>
+        <button id="fiveHundred" type="button" class="bets-money" >$500</button>
+        <button id="thousand" type="button" class="bets-money">$1000</button>
+        
+        <!-- Este boton no se muestra en pantalla pero tengo que solucionar sacarlo pero sin romper el codigo -->
+        <button id="startButton" type="button" class="start-btn" style="display: none;" >Start!</button>
+        
+        <div class="bank-container">
+            <p id="bankParagraph" class="text-light bank-text"></p>
+        </div>
+
         <div class="all-cards-container">
-        <div class="my-cards">
-            <p>You</p>
-            <div id="myCards"></div>
-            <div id="counter"></div>
-        </div>
+            <div class="my-cards">
+                <p class="text-light h4">You</p>
+                <div id="myCards"></div>
+                <div id="counter"></div>
+            </div>
 
-        <div class="dealer-cards">
-            <p>Dealer</p>
-            <div id="dealerCards"></div>
-            <div id="counterDealer"></div>
+            <div class="dealer-cards">
+                <p class="text-light h4">Dealer</p>
+                <div id="dealerCards"></div>
+                <div id="counterDealer"></div>
+            </div>
         </div>
-    </div>
-        <button id="hitButton">Hit</button>
-        <button id="standButton">Stand</button>
-        <button id="reloadButton">Reload</button>
+            <button id="hitButton" class="flow-game">Hit</button>
+            <button id="standButton" class="flow-game">Stand</button>
+            <button id="reloadButton" class="reload-btn">Reload</button>
+
 
         <div id="winOrLose"></div>
-</div>
-   
-    
+        
+        <div id="bet"></div>
 
+        <button id="reStartBtn"class="reStart-btn">Re start</button>
+ 
+        
+    </div>
+
+
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

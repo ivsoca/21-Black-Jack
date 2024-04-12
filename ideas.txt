@@ -1,0 +1,7 @@
+Cosas que quiero agregar:
+
+-letras de cacino al titulo
+-Quitar el boton start y hacer que funcione igual ya que tengo la logica en ese boton y ya no es util tener ese boton alli
+-Agregarle la logica del AS
+-Contador de veces que perdi asi tiene sentido las veces que pierdo
+-Arreglar que cuando tengo menos plata para apostar que no me deje
