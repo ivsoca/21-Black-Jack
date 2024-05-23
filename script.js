@@ -1,32 +1,59 @@
-// const handsValue = {
-//     "2":2,
-//     "3":3,
-//     "4":4,
-//     "5":5,
-//     "6":6,
-//     "7":7,
-//     "8":8,
-//     "9":9,
-//     "10":10,
-//     "J":10,
-//     "Q":10,
-//     "K":10
-// }
+
 
 const handsValue = {
-    './cardsImg/2.png':2,
-    './cardsImg/3.png':3,
-    './cardsImg/4.png':4,
-    './cardsImg/5.png':5,
-    './cardsImg/6.png':6,
-    './cardsImg/7.png':7,
-    './cardsImg/8.png':8,
-    './cardsImg/k.png':10,
-    './cardsImg/q.png':10,
-    './cardsImg/j.png':10,    
+    './trebolpng/TrebolAs2.png':11,
+    './trebolpng/Trebol2.png':2,
+    './trebolpng/Trebol3.png':3,
+    './trebolpng/Trebol4.png':4,
+    './trebolpng/Trebol5.png':5,
+    './trebolpng/Trebol6.png':6,
+    './trebolpng/Trebol7.png':7,
+    './trebolpng/Trebol8.png':8,
+    './trebolpng/Trebol9.png':9,
+    './trebolpng/Trebol10.png':10,
+    './corazonPng/heartAs.png':11,
+    './corazonPng/corazon2.png':2,
+    './corazonPng/corazon3.png':3,
+    './corazonPng/corazon4.png':4,
+    './corazonPng/corazon5.png':5,
+    './corazonPng/corazon6.png':6,
+    './corazonPng/corazon7.png':7,
+    './corazonPng/corazon8.png':8,
+    './corazonPng/corazon9.png':9,
+    './corazonPng/corazon10.png':10,
+    './diamantePng/diamanteAs.png':11,
+    './diamantePng/diamante2.png':2,
+    './diamantePng/diamante3.png':3,
+    './diamantePng/diamante4.png':4,
+    './diamantePng/diamante5.png':5,
+    './diamantePng/diamante6.png':6,
+    './diamantePng/diamante7.png':7,
+    './diamantePng/diamante8.png':8,
+    './diamantePng/diamante9.png':9,
+    './diamantePng/diamante10.png':10,
+    './picaPng/picaAs.png':11,
+    './picaPng/pica2.png':2,
+    './picaPng/pica3.png':3,
+    './picaPng/pica4.png':4,
+    './picaPng/pica5.png':5,
+    './picaPng/pica6.png':6,
+    './picaPng/pica7.png':7,
+    './picaPng/pica8.png':8,
+    './picaPng/pica9.png':9,
+    './picaPng/pica10.png':10,
+    './kingsPng/heartCard.png':10,
+    './kingsPng/kingDiamond.png':10,
+    './kingsPng/kingsuerte.png':10,
+    './kingsPng/kingtrebol.png':10,
+    './jotaPng/jota trbol.png':10,
+    './jotaPng/jotaDiakmante.png':10,
+    './jotaPng/jotaEspada.png':10,
+    './jotaPng/jotaHeart.png':10,
+    './queenspng/queendiamante.png':10,
+    './queenspng/queenesapada.png':10,
+    './queenspng/queensheart.png':10,
+    './queenspng/queenstrbol.png':10,
 };
-
-
 
 console.log(handsValue)
 
@@ -48,6 +75,8 @@ const reloadButton = document.getElementById("reloadButton");
 const winOrLose = document.getElementById("winOrLose");
 const bet = document.getElementById("bet");
 const reStartBtn = document.getElementById("reStartBtn");
+
+// console.log(handsValue['./cardsImg/as.png'])
 
 
 
@@ -74,11 +103,12 @@ if(bank === null) {
 }
 
 
-//Si me quedo sin dinero en el banco este se reinicia a 0
-if(bank <= 0){
-    bank = 1000;
-}
-
+    //Si me quedo sin dinero el juego me avisa y tengo clickear si o si "re start"
+    if(bank <= 0){
+        bank = 0;
+        alert("PERDISTE!");
+        buttonsDisabled();
+    }
 
 //Comienza el juego con 2 cartas
     let total = 0;
@@ -101,11 +131,22 @@ if(bank <= 0){
     });
 
 
-    //Crea el elemento parrafo de "Banco" para mostrar cuando dinero tenes y la actualizacion de la misma a medida que vas jugando 
+    //Esta funcion hace que si tienes menos cantidad en el banco de la que quieres apostar, que directamente no te deje.
+    //la funcion basicamente resta otra ves el valor del banco menos la apuesta que querias hacer.
+    function noMoneyToBet(){
+        if(bank < betAmount){
+            alert("No puedes, no tienes suficiente dinero en el banco");
+            bank =- betAmount;
+            window.location.reload();
+        }
+    }
+
+    //Crea el elemento parrafo de "Banco" para mostrar cuanto dinero tenes y la actualizacion de la misma a medida que vas jugando 
     // const bankElement = document.createElement('p');
     const bankParagraph = document.getElementById("bankParagraph");
     bankParagraph.classList.add("banco-parrafo")
     bankParagraph.textContent = `BANCO: $${bank}`;
+
 
     const bankContainer = document.querySelector('.bank-container');
 
@@ -127,7 +168,17 @@ if(bank <= 0){
         total += value;
         console.log(total)
         counter.innerHTML = `<p class="text-light">Total: ${total}</p>`;
+
+         //Logica del as, cuando tiene que valer 1 y cuando 11
+        if(total > 10){
+            handsValue['./trebolpng/TrebolAs2.png'] = 1;
+            handsValue['./corazonPng/corazonAs.png'] = 1;
+            handsValue['./diamantePng/diamanteAs.png'] = 1;
+            handsValue['./picaPng/picaAs.png'] = 1;
+            console.log(handsValue)
+        }
     }
+
     //El hit button permite apostar mas cartas pero si te pasas de 21 perdes
     hitButton.addEventListener('click',function(){
         const { key, value } = selectRandomCards();
@@ -140,6 +191,7 @@ if(bank <= 0){
             counter.innerHTML = `<p class="text-light">Total: ${total}</p>`;
             hitButton.disabled = true;
             winOrLose.innerHTML = `<p class="text-light">Perdiste! El Dealer Ganó!!<p>`;
+            reloadButton.removeAttribute("disabled");
             startButton.disabled = true;
             standButton.disabled = true;
 
@@ -150,7 +202,8 @@ if(bank <= 0){
             // bet.innerHTML = `<p>Banco:$${bank}<p>`
 
         }else if(total === 21){
-            winOrLose.innerHTML = `<p class="text-light">21 Jack Black !! Ganaste !!<p>`   
+            winOrLose.innerHTML = `<p class="text-light">21 Jack Black !! Ganaste !!<p>`;
+            reloadButton.removeAttribute("disabled");
             hitButton.disabled = true;
             standButton.disabled = true;
             startButton.disabled = true;
@@ -202,6 +255,7 @@ console.log("meegaprueba", bank)
     //Determinar el resultado
     if (totalDealer > 21 || totalDealer < total) {
         winOrLose.innerHTML = `<p class="text-light">Ganaste! El Dealer perdió!</p>`;
+        reloadButton.removeAttribute("disabled");
         hitButton.disabled = true;
         standButton.disabled = true;
         startButton.disabled = true;
@@ -215,6 +269,7 @@ console.log("meegaprueba", bank)
     }
      else if (totalDealer > total) {
         winOrLose.innerHTML = `<p class="text-light">Perdiste! El Dealer ganó.</p>`;
+        reloadButton.removeAttribute("disabled");
         hitButton.disabled = true;
         standButton.disabled = true;
         startButton.disabled = true;
@@ -227,6 +282,7 @@ console.log("meegaprueba", bank)
     }
      else{
             winOrLose.innerHTML = `<p>Empate!</p>`;
+            reloadButton.disabled = false;
         }
     return bank;
 
@@ -234,26 +290,43 @@ console.log("meegaprueba", bank)
 
     console.log("prueba3",bank)
 
+
+    //Cuando apuesto ya sea 100 500 o 1000 los botones se desabilitan para que no te deje seguir apostando y en definitiva crear un bug de apuesta infinita
+    function buttonsDisabled(){
+        hundred.disabled = true;
+        fiveHundred.disabled = true;
+        thousand.disabled = true;    
+    }
+    // Obtener el botón y la alerta
+    const botonPerdiste = document.getElementById('boton-perdiste');
+    const alertaPerdiste = document.getElementById('alerta-perdiste');
+
     
-
-
+ 
     //Boton para empezar mi partida.
     startButton.addEventListener('click', function(){
         startGame();
         // startGameDealer();
+        
     });
 
     hundred.addEventListener('click', function(){
         startGame();
+        noMoneyToBet();
+        buttonsDisabled();
     });
 
     fiveHundred.addEventListener('click', function(){
         startGame();
+        noMoneyToBet();
+        buttonsDisabled();
         // startGameDealer();
     });
 
     thousand.addEventListener('click', function(){
         startGame();
+        noMoneyToBet();
+        buttonsDisabled();
         // startGameDealer();
     });
 
@@ -279,3 +352,4 @@ console.log("meegaprueba", bank)
     
 
 
+     

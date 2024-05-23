@@ -1,7 +1,20 @@
 Cosas que quiero agregar:
 
--letras de cacino al titulo
--Quitar el boton start y hacer que funcione igual ya que tengo la logica en ese boton y ya no es util tener ese boton alli
--Agregarle la logica del AS
--Contador de veces que perdi asi tiene sentido las veces que pierdo
--Arreglar que cuando tengo menos plata para apostar que no me deje
+-Contador de veces que perdi asi tiene sentido las veces que pierdo [meh]
+-Un panel de estadisticas quiza[meh]
+
+Finalizado:
+
+-letras de casino al titulo [Finished]
+-Agregarle la logica del AS [Finished]
+-Arreglar que cuando tengo menos plata para apostar que no me deje [Finished]
+-Que no me deje jugar si no apuesto [Finished]
+-Arreglar que una vez que apostas no te deje apostar de nuevo si no se suma y suma [Finished]
+-Quitar el boton start y hacer que funcione igual ya que tengo la logica en ese boton y ya no es util tener ese boton alli[Finished a medias]
+-Agregarle un ¿como jugar? (con un signo de pregunta quiza) [Finished]
+
+
+
+
+
+

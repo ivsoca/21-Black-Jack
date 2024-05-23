@@ -1,0 +1,8 @@
+  
+   esta linea [159] tengo que ver como solucionar ya que necesito usar mas as como cartas
+  if(total > 10){
+            handsValue['./trebolpng/TrebolAs2.png'] = 1;
+            console.log(handsValue)
+        }
+    }
+
