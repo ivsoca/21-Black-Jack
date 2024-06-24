@@ -1,7 +1,7 @@
 Cosas que quiero agregar:
 
--Contador de veces que perdi asi tiene sentido las veces que pierdo [meh]
--Un panel de estadisticas quiza[meh]
+-Contador de veces que perdi asi tiene sentido las veces que pierdo 
+-Un panel de estadisticas quiza
 
 Finalizado:
 
