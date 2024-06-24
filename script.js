@@ -22,7 +22,7 @@ const handsValue = {
     './corazonPng/corazon9.png':9,
     './corazonPng/corazon10.png':10,
     './diamantePng/diamanteAs.png':11,
-    './diamantePng/diamante2.png':2,
+    './diamantePng/diamante2.1.png':2,
     './diamantePng/diamante3.png':3,
     './diamantePng/diamante4.png':4,
     './diamantePng/diamante5.png':5,
