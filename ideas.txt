@@ -2,6 +2,7 @@ Cosas que quiero agregar:
 
 -Contador de veces que perdi asi tiene sentido las veces que pierdo 
 -Un panel de estadisticas quiza
+-Un panel de estadisticas quiza
 
 Finalizado:
 
