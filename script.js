@@ -1,15 +1,15 @@
 
 
 const handsValue = {
-    './trebolpng/TrebolAs2.1.png':11,
-    './trebolpng/Trebol2.1.png':2,
+    './trebolpng/TrebolAs2.png':11,
+    './trebolpng/Trebol2.png':2,
     './trebolpng/Trebol3.png':3,
     './trebolpng/Trebol4.png':4,
     './trebolpng/Trebol5.png':5,
     './trebolpng/Trebol6.png':6,
     './trebolpng/Trebol7.png':7,
     './trebolpng/Trebol8.png':8,
-    './trebolpng/Trebol9.1.png':9,
+    './trebolpng/Trebol9.png':9,
     './trebolpng/Trebol10.png':10,
     './corazonPng/heartAs.png':11,
     './corazonPng/corazon2.png':2,
@@ -22,7 +22,7 @@ const handsValue = {
     './corazonPng/corazon9.png':9,
     './corazonPng/corazon10.png':10,
     './diamantePng/diamanteAs.png':11,
-    './diamantePng/diamante2.1.png':2,
+    './diamantePng/diamante2.png':2,
     './diamantePng/diamante3.png':3,
     './diamantePng/diamante4.png':4,
     './diamantePng/diamante5.png':5,
