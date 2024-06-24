@@ -10,9 +10,14 @@
 </head>
 <body class="custom-bg">
  
-    <h1 class="text-danger" id="h1">21 Black Jack</h1>
+    <nav>
+        <h1 class="text-danger" id="h1">21 Black Jack</h1>
+        <div class="icons-container">
+            <img class="btn icons" src="./informacion.png" title="¿Como jugar?" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"></img>
+        </div>
+    </nav>
     
-    <div class="offcanvas offcanvas-start bg-secondary" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas offcanvas-start" style="background-color: rgb(75, 75, 75);" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
     <div class="offcanvas-header">
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
@@ -40,28 +45,31 @@
     <!-- <img src="./informacion.png" class="how-to-play" alt="Como jugar?"> -->
     
     <div class="container all-game">
-        <p class="text-light h5">¿Cuanto desea apostar?</p>
+        <p class="text-light h5">¿How much do you want to bet?</p>
       
         <button id="hundred" type="button" class="bets-money" >$100</button>
         <button id="fiveHundred" type="button" class="bets-money" >$500</button>
         <button id="thousand" type="button" class="bets-money">$1000</button>
         
+        <div class="bank-container">
+            <p id="bankParagraph" class="text-light bank-text"></p>
+            <img src="./dollar.png" class="dollar-icon"  alt="">
+        </div>
+
         <!-- Este boton no se muestra en pantalla pero tengo que solucionar sacarlo pero sin romper el codigo -->
         <button id="startButton" type="button" class="start-btn" style="display: none;" >Start!</button>
         
-        <div class="bank-container">
-            <p id="bankParagraph" class="text-light bank-text"></p>
-        </div>
+        
+        
 
         <div class="all-cards-container">
             <div class="my-cards">
-                <p class="text-light h4">You</p>
+            <p class="text-light h4">You</p>
                 <div id="myCards"></div>
                 <div id="counter"></div>
             </div>
-
             <div class="dealer-cards">
-                <p class="text-light h4">Dealer</p>
+            <p class="text-light h4">Dealer</p>
                 <div id="dealerCards"></div>
                 <div id="counterDealer"></div>
             </div>
@@ -78,9 +86,7 @@
     </div>
     
 
-    <div class="icons-container">
-        <img class="btn icons" src="./informacion.png" title="¿Como jugar?" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"></img>
-    </div>
+   
 
     <!-- <h2 class="score" id="lost">Perdidas:</h2> -->
 

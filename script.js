@@ -1,5 +1,3 @@
-
-
 const handsValue = {
     './trebolpng/TrebolAs2.png':11,
     './trebolpng/Trebol2.png':2,
@@ -55,11 +53,6 @@ const handsValue = {
     './queenspng/queenstrbol.png':10,
 };
 
-// const handsValue = {
-//     './imgprueba/queenesapada (1).jpg':10,
-//     './imgprueba/queensheart.jpg':10,
-//     './imgprueba/queensheart.jpg':10
-// }
 
 console.log(handsValue)
 
@@ -151,7 +144,8 @@ if(bank === null) {
     // const bankElement = document.createElement('p');
     const bankParagraph = document.getElementById("bankParagraph");
     bankParagraph.classList.add("banco-parrafo")
-    bankParagraph.textContent = `BANCO: $${bank}`;
+    bankParagraph.textContent = `$${bank}`;
+    
 
 
     const bankContainer = document.querySelector('.bank-container');
@@ -196,7 +190,7 @@ if(bank === null) {
         if(total > 21){
             counter.innerHTML = `<p class="text-light">Total: ${total}</p>`;
             hitButton.disabled = true;
-            winOrLose.innerHTML = `<p class="text-light">Perdiste! El Dealer Ganó!!<p>`;
+            winOrLose.innerHTML = `<p class="lose-text">You lose!<p>`;
             reloadButton.removeAttribute("disabled");
             startButton.disabled = true;
             standButton.disabled = true;
@@ -208,7 +202,7 @@ if(bank === null) {
             // bet.innerHTML = `<p>Banco:$${bank}<p>`
 
         }else if(total === 21){
-            winOrLose.innerHTML = `<p class="text-light">21 Jack Black !! Ganaste !!<p>`;
+            winOrLose.innerHTML = `<p class="win-text">21 Black Jack You Win! <p>`;
             reloadButton.removeAttribute("disabled");
             hitButton.disabled = true;
             standButton.disabled = true;
@@ -260,7 +254,7 @@ console.log("meegaprueba", bank)
 
     //Determinar el resultado
     if (totalDealer > 21 || totalDealer < total) {
-        winOrLose.innerHTML = `<p class="text-light">Ganaste! El Dealer perdió!</p>`;
+        winOrLose.innerHTML = `<p class="win-text">You win!</p>`;
         reloadButton.removeAttribute("disabled");
         hitButton.disabled = true;
         standButton.disabled = true;
@@ -274,7 +268,7 @@ console.log("meegaprueba", bank)
 
     }
      else if (totalDealer > total) {
-        winOrLose.innerHTML = `<p class="text-light">Perdiste! El Dealer ganó.</p>`;
+        winOrLose.innerHTML = `<p class="lose-text">You lose!</p>`;
         reloadButton.removeAttribute("disabled");
         hitButton.disabled = true;
         standButton.disabled = true;
@@ -287,7 +281,7 @@ console.log("meegaprueba", bank)
         // bet.innerHTML = `<p>Banco:$${bank}<p>`
     }
      else{
-            winOrLose.innerHTML = `<p>Empate!</p>`;
+            winOrLose.innerHTML = `<p class="draw-text">Draw !</p>`;
             reloadButton.disabled = false;
         }
     return bank;
