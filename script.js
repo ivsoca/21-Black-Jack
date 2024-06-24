@@ -57,6 +57,7 @@
 
 const handsValue = {
     './imgprueba/queenesapada (1).jpg':10,
+    './imgprueba/queensheart.jpg':10,
     './imgprueba/queensheart.jpg':10
 }
 
