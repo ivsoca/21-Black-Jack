@@ -1,7 +1,7 @@
 
 
 const handsValue = {
-    './trebolpng/TrebolAs2.png':11,
+    './trebolpng/TrebolAs2.1.png':11,
     './trebolpng/Trebol2.1.png':2,
     './trebolpng/Trebol3.png':3,
     './trebolpng/Trebol4.png':4,
