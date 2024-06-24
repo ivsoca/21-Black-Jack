@@ -2,14 +2,14 @@
 
 const handsValue = {
     './trebolpng/TrebolAs2.png':11,
-    './trebolpng/Trebol2.png':2,
+    './trebolpng/Trebol2.1.png':2,
     './trebolpng/Trebol3.png':3,
     './trebolpng/Trebol4.png':4,
     './trebolpng/Trebol5.png':5,
     './trebolpng/Trebol6.png':6,
     './trebolpng/Trebol7.png':7,
     './trebolpng/Trebol8.png':8,
-    './trebolpng/Trebol9.png':9,
+    './trebolpng/Trebol9.1.png':9,
     './trebolpng/Trebol10.png':10,
     './corazonPng/heartAs.png':11,
     './corazonPng/corazon2.png':2,
