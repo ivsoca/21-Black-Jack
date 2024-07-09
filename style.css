@@ -19,10 +19,7 @@ body{
     src: url("./CasinoShadow-Italic.ttf");
 }
 
-@font-face {
-    font-family:"casino" ;
-    src: url("./fonts/Casino.ttf");
-}
+
 
 @font-face {
     font-family:"retro" ;
@@ -33,13 +30,12 @@ body{
     font-size: 25px;
     position: relative;
     top: 15px;
-    font-family: "casino";
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
-
-
-.bank-container{
-    display: flex;
+.flags{
+    width: 40px;
 }
 
 .dollar-icon{
@@ -52,6 +48,7 @@ body{
 
 h1{
     text-align: center;
+    margin: 0 auto;
     /* color: white; */
     /* padding-bottom: 10px; */
     font-family: casinoItalic;
@@ -63,14 +60,12 @@ h1{
 }
 
 
-
-
 .icons{
     width: 70px;
     /* float: right; */
     cursor: pointer;
     position:relative;
-    bottom: 30px;
+    bottom: 25px;
     margin: 10px;
 }
 
@@ -95,7 +90,6 @@ h1{
 .card-text p{
     text-decoration: underline;
 }
-
 
 .btn-close {
     background-color: rgb(255, 255, 255) !important; 
@@ -137,6 +131,12 @@ h1{
     padding: 10px; */
 }
 
+.bank-container{
+    display: flex;
+    /* position: relative;
+    left: 150px; */
+}
+
 /* Tamaño donde estan ubicadas las cartas */
 .my-cards, .dealer-cards{
     /* border: 1px solid; */
@@ -144,6 +144,8 @@ h1{
     /* background-color: rgba(255, 255, 255, 0.103); */
     border-radius: 4px;
     height: 255px;
+    /* width: 1000px; */
+    margin: 0 auto;
     margin-bottom: 30px;
     /* width: 1000px; */
 }
@@ -160,12 +162,16 @@ h1{
     width: 110px;
     border: none;
 }
+
+#myCards, #dealerCards {
+    margin: -2px;
+}
+
+
 /* 
 #myCards img, #dealerCards img{
     width:100px;
 } */
-
-
 
 
 .bank-text{
@@ -191,4 +197,8 @@ h1{
     color: white;
 }
 
+
+.language-buttons{
+    /* text-decoration: none; */
+}
 
